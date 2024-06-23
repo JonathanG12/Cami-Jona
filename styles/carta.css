@@ -1,0 +1,129 @@
+/* Estilos para carta.html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Dancing Script', cursive;
+    background: url('../images/flores.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    background: rgba(255, 182, 193, 0.8);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    flex: 1;
+}
+
+header button {
+    font-size: 1em;
+    padding: 10px 24px;
+    background-color: #ffffff;
+    color: #ff69b4;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    margin-right: 20px;
+}
+
+header button:hover {
+    background-color: #f24ea0;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.letter-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    text-align: justify;
+    border: 2px solid #ff69b4;
+    position: relative;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    margin-top: 120px; /* Espacio adicional arriba del contenido */
+    max-height: 70vh; /* Limita la altura para que no exceda la ventana */
+}
+
+.letter-container .letter-content {
+    position: relative;
+    z-index: 2;
+}
+
+.letter-container p {
+    font-size: 1.5em;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.letter-container::before {
+    content: 'Para mi novia Cami';
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ff69b4;
+}
+
+.letter-container::after {
+    content: 'Con todo mi amor, Jonathan';
+    display: block;
+    font-size: 1.8em;
+    margin-top: 40px;
+    text-align: right;
+    color: #ff69b4;
+}
+
+/* Estilos adicionales */
+.letter-container .letter-content p {
+    margin-bottom: 20px;
+}
+
+.letter-container .letter-content p:first-of-type::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff69b4;
+    margin-right: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 2s ease-in-out;
+}
